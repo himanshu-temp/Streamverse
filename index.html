@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamVerse - Your Ultimate IPTV Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('https://placehold.co/1600x900/0a0a0a/e5e5e5?text=Your+Awesome+Hero+Image+Here') no-repeat center center/cover;
+            /* Replace the placeholder URL above with the image you generate */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .channel-logo {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .channel-logo:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.2), 0 10px 10px -5px rgba(139, 92, 246, 0.1);
+        }
+        .feature-icon {
+            background: linear-gradient(145deg, #8B5CF6, #6366F1);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #8B5CF6, #EC4899);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white tracking-tighter">
+                Stream<span class="text-violet-400">Verse</span>
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-violet-400 transition">Features</a>
+                <a href="#channels" class="text-gray-300 hover:text-violet-400 transition">Channels</a>
+                <a href="#pricing" class="text-gray-300 hover:text-violet-400 transition">Pricing</a>
+                <a href="#contact" class="text-gray-300 hover:text-violet-400 transition">Contact</a>
+            </nav>
+            <a href="#pricing" class="hidden md:block btn-primary text-white font-semibold px-6 py-2 rounded-full">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+             <a href="#features" class="block text-center py-3 text-gray-300 hover:text-violet-400 transition">Features</a>
+             <a href="#channels" class="block text-center py-3 text-gray-300 hover:text-violet-400 transition">Channels</a>
+             <a href="#pricing" class="block text-center py-3 text-gray-300 hover:text-violet-400 transition">Pricing</a>
+             <a href="#contact" class="block text-center py-3 text-gray-300 hover:text-violet-400 transition">Contact</a>
+             <div class="py-4 flex justify-center">
+                <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-3 rounded-full">Get Started</a>
+             </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center text-center pt-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in-down">
+                The Universe of Entertainment,
+                <br class="hidden md:block">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-pink-500">At Your Fingertips.</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Experience thousands of live TV channels, movies, and series on any device. Crystal-clear quality, buffer-free streaming, and endless content.
+            </p>
+            <a href="#pricing" class="btn-primary text-white font-bold text-lg px-10 py-4 rounded-full inline-block">
+                Start Your Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold mb-2">Why Choose StreamVerse?</h3>
+            <p class="text-gray-400 mb-12">We provide features that elevate your viewing experience.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="feature-icon text-white w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">100+ Indian TV Channels</h4>
+                    <p class="text-gray-400">Access all local channels, live and on-demand channels also available.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="feature-icon text-white w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Movies & VOD</h4>
+                    <p class="text-gray-400">On Demand Movies & VOD(video-on-demand) available.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="feature-icon text-white w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">480p to 4K Quality</h4>
+                    <p class="text-gray-400">Stream your favorite content in stunning Ultra HD resolution without buffering.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="glass-effect p-8 rounded-2xl">
+                    <div class="feature-icon text-white w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Multi-Device</h4>
+                    <p class="text-gray-400">Watch on your TV, computer, tablet, or smartphone. Compatible with all major devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section id="channels" class="py-20 bg-black bg-opacity-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold mb-12">A Glimpse of Our Channels</h3>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
+                <!-- Dummy Logos - Replace with actual channel logos -->
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=SPORTS" alt="Sports Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=MOVIES" alt="Movies Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=NEWS" alt="News Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=KIDS" alt="Kids Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=Entertainment" alt="Music Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=Information" alt="Documentary Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=LIFE" alt="Lifestyle Channel" class="h-8">
+                </div>
+                <div class="channel-logo flex items-center justify-center p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x50/ffffff/000000?text=WORLD" alt="World Channel" class="h-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold mb-2">Choose Your Plan</h3>
+            <p class="text-gray-400 mb-12">Simple, transparent pricing. No hidden fees.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plan 1 -->
+                <div class="pricing-card glass-effect p-8 rounded-2xl border-2 border-transparent">
+                    <h4 class="text-2xl font-bold mb-4">Basic</h4>
+                    <p class="text-5xl font-extrabold mb-2">₹100<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                    <ul class="text-left my-8 space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>1 Connection</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>100+ Indian Channels</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>HD & SD Quality</li>
+                        <li><i class="fas fa-times text-gray-600 mr-2"></i>No 4K Content</li>
+                        <li><i class="fas fa-times text-gray-600 mr-2"></i>No Premium Sports</li>
+                    </ul>
+                    <a href="#" class="border border-violet-400 text-violet-400 font-semibold px-8 py-3 rounded-full w-full block hover:bg-violet-400 hover:text-white transition">Choose Plan</a>
+                </div>
+                <!-- Plan 2 (Most Popular) -->
+                <div class="pricing-card glass-effect p-8 rounded-2xl border-2 border-violet-400 relative">
+                    <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-violet-500 text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</span>
+                    <h4 class="text-2xl font-bold mb-4">Pro</h4>
+                    <p class="text-5xl font-extrabold mb-2">₹250<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                    <ul class="text-left my-8 space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>3 Connections</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>100+ Indians Channels</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>HD, FHD & 4K Quality</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Premium Sports Included</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>VOD Library Access</li>
+                    </ul>
+                    <a href="#" class="btn-primary text-white font-semibold px-8 py-3 rounded-full w-full block">Choose Plan</a>
+                </div>
+                <!-- Plan 3 -->
+                <div class="pricing-card glass-effect p-8 rounded-2xl border-2 border-transparent">
+                    <h4 class="text-2xl font-bold mb-4">Family</h4>
+                    <p class="text-5xl font-extrabold mb-2">₹450<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                    <ul class="text-left my-8 space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>5 Connections</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>All Channels & VOD</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>HD, FHD & 4K Quality</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Premium Sports Included</li>
+                        <li><i class="fas fa-check text-violet-400 mr-2"></i>Priority Support</li>
+                    </ul>
+                    <a href="#" class="border border-violet-400 text-violet-400 font-semibold px-8 py-3 rounded-full w-full block hover:bg-violet-400 hover:text-white transition">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black bg-opacity-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-4xl font-bold mb-2">Get In Touch</h3>
+                <p class="text-gray-400 mb-12">Have questions? We're here to help!</p>
+            </div>
+            <div class="max-w-2xl mx-auto glass-effect rounded-2xl p-8">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" placeholder="Your Name" class="w-full bg-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-violet-400">
+                        <input type="email" placeholder="Your Email" class="w-full bg-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-violet-400">
+                    </div>
+                    <textarea placeholder="Your Message" rows="5" class="w-full bg-gray-800 rounded-lg px-4 py-3 mb-6 text-white focus:outline-none focus:ring-2 focus:ring-violet-400"></textarea>
+                    <button type="submit" class="btn-primary text-white font-bold px-10 py-3 rounded-full w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 StreamVerse. All Rights Reserved.</p>
+            <p class="text-sm mt-2">This is a template website. All logos and channels are for demonstration purposes only.</p>
+            <p class="text-sm mt-2">Any Query Related Contact Himanshu Singh.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple script for header background on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black', 'bg-opacity-80', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('bg-black', 'bg-opacity-80', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+
+</body>
+</html>
